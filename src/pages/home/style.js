@@ -14,6 +14,7 @@ export const HomeLeft = styled.div`
   .banner-img {
     width: 625px;
     height: 270px;
+    border-radius: 6px;
   }
 `
 
@@ -97,5 +98,61 @@ export const RecommandInfo = styled.div`
     margin-bottom: 6px;
     border-radius: 4px;
   }
+`
+export const QrcodeWrapper = styled.div`
+  overflow: hidden;
+  padding: 10px 22px;
+  margin-bottom: 30px;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  background-color: #fff;
+  .qrcode {
+    width: 60px;
+    height: 60px;
+    opacity: .85;
+    float: left;
+  }
+`
+
+export const QrcodeInfo = styled.div`
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+  margin-left: 7px;
+  .title {
+    font-size: 15px;
+    line-height: 30px;
+    color: #333;
+  }
+  .desc {
+    margin-top: 4px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #999;
+  }
+`
+
+export const LoadMore = styled.div`
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin: 30px 0;
+  background: #a5a5a5;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+`
+
+export const BackTop = styled.div`
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 14px;
 `
 

@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import { HomeWapper,HomeLeft, HomeRight } from './style';
+import { connect } from 'react-redux';
+import { HomeWapper,HomeLeft, HomeRight,BackTop } from './style';
 // import Topic from './component/Topic';
 import Recommend from './component/Recommend';
 import Writer from './component/Writer';
+import Qrcode from './component/Qrcode'
 import List from './component/List';
+import { actionCreator } from './store';
 
 class Home extends Component {
+
+  handleScrollTop() {
+    window.scrollTo(0,0);
+  }
+  
   render() {
     return (
       <HomeWapper>
@@ -16,11 +24,24 @@ class Home extends Component {
         </HomeLeft>
         <HomeRight>
           <Recommend />
+          <Qrcode />
           <Writer />
         </HomeRight>
+        <BackTop onClick={this.handleScrollTop}>
+          回到顶部
+        </BackTop>
       </HomeWapper>
     )
   }
+  componentDidMount() {
+    this.props.changeHomeData();
+  }
 }
+const mapDispatch = (dispatch) => ({
+  changeHomeData() {
+    const action = actionCreator.getHomeInfo();
+    dispatch(action);
+  }
+})
 
-export default Home;
+export default connect(null,mapDispatch)(Home);
