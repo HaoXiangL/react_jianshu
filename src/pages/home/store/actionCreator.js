@@ -31,4 +31,10 @@ export const getMoreList = (page) => {
       dispatch(addHomeList(result,page + 1));
     });
   }
+  
 }
+
+export const toggleTopShow = (show) => ({
+  type: actionType.TOGGLE_SCROLL_TOP,
+  show
+})

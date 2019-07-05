@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { QrcodeWrapper, QrcodeInfo } from '../style';
 
-class Qrcode extends Component {
+class Qrcode extends PureComponent {
   render() {
     return (
       <QrcodeWrapper>

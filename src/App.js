@@ -7,6 +7,8 @@ import store from './store/index';
 import { BrowserRouter, Route} from 'react-router-dom';
 import Detail from './pages/detail';
 import Home from './pages/home';
+import Login from './pages/login';
+
 
 class App extends Component {
   render() {
@@ -15,10 +17,11 @@ class App extends Component {
         <Provider store={store}>
           <GlobalStyle />
           <Iconfont />
-          <Header />
           <BrowserRouter>
+            <Header />
             <Route path='/' exact component={Home} />
-            <Route path='/detail' component={Detail} />
+            <Route path='/login' exact component={Login} />
+            <Route path='/detail/:id' component={Detail} />
           </BrowserRouter>
         </Provider>
       </Fragment>
