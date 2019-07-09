@@ -8,6 +8,7 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import Detail from './pages/detail';
 import Home from './pages/home';
 import Login from './pages/login';
+import Write from './pages/write';
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
             <Header />
             <Route path='/' exact component={Home} />
             <Route path='/login' exact component={Login} />
+            <Route path='/write' exact component={Write} />
             <Route path='/detail/:id' component={Detail} />
           </BrowserRouter>
         </Provider>
